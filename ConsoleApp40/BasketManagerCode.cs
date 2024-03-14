@@ -39,7 +39,7 @@ class BasketManager
 public class Product
 {
     public string Name_Produrt { get; }
-    private double Price;
+    public double Price { get; }
     public CategoryProduct _Category { get; }
 
     public Product(string name_product, double price, CategoryProduct _Product)
@@ -109,6 +109,18 @@ class Printinfo : ICommandBasket
         if (BasketManager.basketManager.products.Count != 0)
         {
             BasketManager.basketManager.PrintInfo();
+            if (BasketManager.basketManager.products.Count > 0)
+            {
+                if (InputHelper.Input("о каком продукте вы хотите узнать информацию:\n ", 1, BasketManager.basketManager.products.Count, out int inputvalue))
+                {
+                    var nameproduct = BasketManager.basketManager.products[inputvalue - 1].Name_Produrt;
+                    var priceproduct = BasketManager.basketManager.products[inputvalue - 1].Price;
+                    var category = BasketManager.basketManager.products[inputvalue - 1]._Category;
+
+                    Console.WriteLine($"имя продукта: {nameproduct}\nцена продукта: {priceproduct}\nкатегория продукта: {category}");
+                }
+            }
+
         }
         else
         {

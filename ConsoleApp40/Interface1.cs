@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-
 public interface ICommandBasket
 {
     public void Run();

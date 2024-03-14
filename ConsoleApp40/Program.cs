@@ -1,10 +1,6 @@
 ﻿using System;
-
-
 class Program
 {
-
-
     static void Main(string[] args)
     {
         ICommandBasket[] commandBaskets = new ICommandBasket[]
