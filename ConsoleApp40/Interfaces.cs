@@ -6,6 +6,6 @@ public interface ICommandBasket
 }
 public interface IInfoEnum_CategoryProduct
 {
-    public void ShowEnum_CategoryProduct();
+    public void ShowEnum_CategoryProduct(); 
 
 }

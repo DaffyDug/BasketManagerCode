@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class BasketManager
+class BasketManager 
 {
     public static readonly BasketManager basketManager;
     public List<Product> products = new List<Product>();

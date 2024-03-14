@@ -13,11 +13,7 @@ class Program
 
         while (true)
         {
-            for (int i = 0; i < commandBaskets.Length; i++)
-            {
-                ICommandBasket item = commandBaskets[i];
-                Console.WriteLine($"{i + 1}--{item}");
-            }
+            ShowMenu(commandBaskets);
             if (InputHelper.Input("выберите что вы будете делать: ", 1, commandBaskets.Length, out int inputvalue))
             {
                 commandBaskets[inputvalue - 1].Run();
@@ -34,5 +30,13 @@ class Program
         int.TryParse(Console.ReadLine(), out int intvalue);
         commandBaskets[intvalue - 1].Run();
         Console.WriteLine('\n');
+    }
+    static void ShowMenu(ICommandBasket[] commandBaskets)
+    {
+        for (int i = 0; i < commandBaskets.Length; i++)
+        {
+            ICommandBasket item = commandBaskets[i];
+            Console.WriteLine($"{i + 1}--{item}");
+        }
     }
 }

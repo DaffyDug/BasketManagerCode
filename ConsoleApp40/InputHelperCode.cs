@@ -19,4 +19,4 @@ public static class InputHelper
         }
         return result;
     }
-}
+} 
