@@ -9,7 +9,7 @@ class Program
         new RemoveProduct(),
         new Printinfo(),
         new PrintinfoCategoryProduct(),
-};
+}; 
 
         while (true)
         {
